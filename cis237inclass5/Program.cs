@@ -10,6 +10,18 @@ namespace cis237inclass5
     {
         static void Main(string[] args)
         {
+            //make a new instance of the cars collection
+            CarsJSziedeEntities carsJSziedeEntities = new CarsJSziedeEntities();
+
+            //*************************************
+            //List out all of the cars in the table
+            //*************************************
+            Console.WriteLine("Print the list");
+
+            foreach (Car car in carsJSziedeEntities.Cars)
+            {
+                Console.WriteLine(car.id + " " + car.make + " " + car.model);
+            }
         }
     }
 }
